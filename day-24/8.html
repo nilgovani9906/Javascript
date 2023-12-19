@@ -1,0 +1,23 @@
+<!-- - Given an array of words, use `map()` to create a new array containing the lengths of each word, and then `filter()` to find words with odd lengths. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let words = ["apple", "banana", "orange", "grape", "kiwi"];
+
+    let wordLengths = words.map(word => word.length);
+
+    let oddLengthWords = words.filter((word, index) => wordLengths[index] % 2 !== 0);
+
+    console.log("Words with odd lengths:", oddLengthWords);
+  </script>
+</html>
