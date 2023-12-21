@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let numbers = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+    let result = sumSquareEvenNum(numbers);
+function sumSquareEvenNum(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sum += arr[i] * arr[i];
+    }
+  }
+  return sum;
+}
+console.log(result); 
+
+</script>
