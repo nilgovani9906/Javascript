@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>que-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+let library= [
+  {
+    title: "1984",
+    author: "George Orwell",
+    year: 1949
+  },
+  {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    year: 1960
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925
+  }
+];
+
+function find(library, year) {
+    let filt = library.filter(book => book.year < year);
+    
+    let bookT = filt.map(book => book.title);
+  
+    return bookT;
+  }
+
+  let books = find(library, 2000);
+  console.log(books);
+
+</script>
