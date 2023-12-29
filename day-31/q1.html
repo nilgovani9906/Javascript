@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+</head>
+<body>
+
+<div class="color">
+  <h1 id="heading1">This is H1</h1>
+  <h3 class="heading3">This is H3</h3>
+  <h5 class="heading5">This is H5</h5>
+</div>
+<button onclick="changeH1Color()">Change H1</button>
+<button onclick="changeH3Color()">Change H3</button>
+<button onclick="changeH5Color()">Change H5</button>
+<button onclick="changeColorByClass('green')">Change Green</button>
+<button onclick="changeColorByClass('blue')">Change Blue</button>
+<button onclick="changeColorByClass('red')">Change Red</button>
+
+<script>
+  function changeH1Color() {
+    var h1Element = document.getElementById('heading1');
+    h1Element.style.color = 'red';
+  }
+
+  function changeH3Color() {
+    var h3Elements = document.querySelectorAll('.color h3');
+    for (var i = 0; i < h3Elements.length; i++) {
+      h3Elements[i].style.color = 'green';
+    }
+  }
+
+  function changeH5Color() {
+    var h5Elements = document.querySelectorAll('.color h5');
+    for (var i = 0; i < h5Elements.length; i++) {
+      h5Elements[i].style.color = 'blue';
+    }
+  }
+
+  function changeColorByClass(className) {
+    var elements = document.querySelectorAll('.color h1, .color h3, .color h5');
+    for (var i = 0; i < elements.length; i++) {
+      if (className === 'green') {
+        elements[i].style.color = 'green';
+      } else if (className === 'blue') {
+        elements[i].style.color = 'blue';
+      } else if (className === 'red') {
+        elements[i].style.color = 'red';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
+    
