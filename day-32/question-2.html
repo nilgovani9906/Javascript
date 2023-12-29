@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Check</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Poppins:wght@200&family=Quicksand:wght@600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+        .style{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        /* font-size: 50px; */
+    }
+    .btn{
+        height: 40px;
+        width: 110px;
+        border: 2px solid black;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        background-color:gold;
+        font-size: 25px;
+    }
+  </style>
+
+</head>
+<body>
+    <center><br>
+        <h1 class="style">check Age For Driving</h1>
+
+  <label for="age" class="style">Enter your age:</label>
+  <input type="text" id="age" name="age" required placeholder="Enter Age" class="style">
+  <br><br><br>
+  <p id="result" class="style"></p>
+  <hr style="border: 1px solid black;">
+  <button onclick="checkAge()" class="btn">Check</button>
+  <hr style="border: 1px solid black;">
+  
+</center>
+</body>
+</html>
+<script>
+    function checkAge() {
+      var ageInput = document.getElementById("age").value;
+      var message = document.getElementById("result");
+
+      if (ageInput === "") {
+        message.textContent = "Please enter your age.";
+      } else if (isNaN(ageInput)) {
+        message.textContent = "Please enter a valid age.";
+      } else {
+        var age = parseInt(ageInput);
+        
+        if (age > 18) {
+          message.textContent = "You can drive in India!";
+        } else if (age < 18) {
+          message.textContent = "You can't drive in India.";
+        } else {
+          message.textContent = "You are just old enough to drive in India!";
+        }
+      }
+    }
+  </script>

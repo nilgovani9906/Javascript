@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Poppins:wght@200&family=Quicksand:wght@600&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    .style{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .btn{
+        height: 40px;
+        width: 110px;
+        border: 2px solid black;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        background-color: aquamarine;
+    }
+</style>
+<body>
+    <center>
+        <h1 class="style">Calculator</h1>
+
+        <label for="" class="style">Enter First Value</label>
+        <input type="text" placeholder="Enter Value" id="in1" class="style">
+
+        <br><br>
+
+        <label for="" class="style">Enter Second Value</label>
+        <input type="text" placeholder="Enter Value" id="in2" class="style">
+
+        <br><br>
+
+        <label for="" class="style">Enter Third Value</label>
+        <input type="text" placeholder="Enter Value" id="in3" class="style">
+
+        <br><br>
+
+        <label for="" class="style">Enter Fourth Value</label>
+        <input type="text" placeholder="Enter Value" id="in4" class="style">
+
+        <br><br>
+
+        <h2 id="ans" class="style"></h2>
+
+        <hr style="border: 1px solid black;">
+        <button onclick="add()" class="btn">Addition</button>
+        <button onclick="add2()" class="btn">Subtraction</button>
+        <button onclick="add3()" class="btn">Division</button>
+        <button onclick="add4()" class="btn">Multiplication</button>
+
+        <hr style="border: 1px solid black;">
+    </center>
+</body>
+</html>
+
+<script>
+    function add(){
+        var first = document.getElementById("in1").value;
+        var second = document.getElementById("in2").value;
+        var third = document.getElementById("in3").value;
+        var fourth = document.getElementById("in4").value;
+
+        var sum = +first + +second + +third + +fourth
+
+        document.getElementById("ans").innerHTML="Sum of Two Number is :" +sum
+    }
+
+    function add2(){
+        var first = document.getElementById("in1").value;
+        var second = document.getElementById("in2").value;
+        var third = document.getElementById("in3").value;
+        var fourth = document.getElementById("in4").value;
+
+        var sum = +first - +second - +third - +fourth
+
+        document.getElementById("ans").innerHTML="Sum of Two Number is :" +sum
+    }
+
+    function add3(){
+        var first = document.getElementById("in1").value;
+        var second = document.getElementById("in2").value;
+        var third = document.getElementById("in3").value;
+        var fourth = document.getElementById("in4").value;
+
+        var sum = +first * +second * +third * +fourth
+
+        document.getElementById("ans").innerHTML="Sum of Four Number is :" +sum
+    }
+
+    function add4(){
+        var first = document.getElementById("in1").value;
+        var second = document.getElementById("in2").value;
+        var third = document.getElementById("in3").value;
+        var fourth = document.getElementById("in4").value;
+
+        var sum = +first / +second / +third / +fourth
+
+        document.getElementById("ans").innerHTML="Sum of Four Number is :" +sum
+    }
+</script>
