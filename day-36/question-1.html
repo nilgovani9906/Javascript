@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shape Hierarchy</title>
+</head>
+<body>
+  <script>
+    
+    function Shape() {
+      this.calculateArea = function() {
+        return 0; 
+      };
+    }
+
+    function Circle(radius) {
+      Shape.call(this);
+      this.radius = radius;
+
+      this.calculateArea = function() {
+        return Math.PI * this.radius ** 2;
+      };
+
+    }
+    Circle.prototype = Object.create(Shape.prototype);
+
+    function Rectangle(width, height) {
+      Shape.call(this);
+      this.width = width;
+      this.height = height;
+
+      this.calculateArea = function() {
+        return this.width * this.height;
+      };
+
+      this.calculatePerimeter = function() {
+        return 2 * (this.width + this.height);
+      };
+    }
+    Rectangle.prototype = Object.create(Shape.prototype);
+
+    function Square(side) {
+      Rectangle.call(this, side, side);
+    }
+    Square.prototype = Object.create(Rectangle.prototype);
+
+    const circle = new Circle(5);
+    console.log("Circle Area:", circle.calculateArea());
+
+    const rectangle = new Rectangle(4, 6);
+    console.log("Rectangle Area:", rectangle.calculateArea());
+
+    const square = new Square(5);
+    console.log("Square Area:", square.calculateArea());
+
+  </script>
+</body>
+</html>

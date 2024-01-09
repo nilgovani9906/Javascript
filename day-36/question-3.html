@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+class Food {
+  cook() {
+    console.log('Cooking the food...');
+  }
+}
+
+class Pizza extends Food {
+  cook() {
+    console.log('Preparing pizza dough, adding toppings, and baking in the oven.');
+  }
+}
+
+class Sushi extends Food {
+  cook() {
+    console.log('Making sushi rice, cutting fish, and rolling sushi.');
+  }
+}
+
+class Burger extends Food {
+  cook() {
+    console.log('Grilling the burger patties, assembling with toppings, and toasting the buns.');
+  }
+}
+
+const myPizza = new Pizza();
+const mySushi = new Sushi();
+const myBurger = new Burger();
+
+console.log('Cooking a Pizza:');
+myPizza.cook();
+
+console.log('Preparing Sushi:');
+mySushi.cook();
+
+console.log('Making a Burger:');
+myBurger.cook();
+
+</script>

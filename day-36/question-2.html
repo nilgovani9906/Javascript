@@ -1,0 +1,49 @@
+<!-- 2. Animals and Sounds -->
+   <!-- Implement an `Animal` base class with a method `makeSound()`. Create subclasses like `Dog`, `Cat`, and `Bird` that extend `Animal` and override `makeSound()` to return the sound each animal makes. Then, create instances of these subclasses and call `makeSound()` to display the respective animal sounds. -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   </head>
+   <body>
+    
+   </body>
+   </html>
+   <script>
+    class Animal{
+        makesound(){
+            return "sound..."
+        }
+    }
+
+    class Dog extends Animal{
+        makesound(){
+            return "bhau-bhau"
+        }
+    }
+
+    class Cat extends Animal{
+        makesound(){
+            return "meoww-meoww"
+        }
+    }
+
+    class Asiankoel extends Animal{
+        makesound(){
+            return "koo-ooo"
+        }
+    }
+
+    const doggie = new Dog
+    const cuttie = new Cat
+    const kagdi = new Asiankoel
+
+
+    console.log(doggie.makesound())
+    console.log(cuttie.makesound())
+    console.log(kagdi.makesound())
+
+   </script>
