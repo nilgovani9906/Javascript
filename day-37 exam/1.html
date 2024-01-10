@@ -1,0 +1,37 @@
+<!-- **Question:**
+Imagine you are building a drawing application. You have a `Shape` class with a method `draw()` that prints "Drawing a shape" to the console. Create two subclasses, `Circle` and `Square`, both inheriting from the `Shape` class. Override the `draw()` method in both subclasses so that `Circle` prints "Drawing a circle" and `Square` prints "Drawing a square". Create instances of both `Circle` and `Square` classes and call the `draw()` method on each instance.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Shape{
+    draw(){
+        return "Drawing a Shape"
+    }
+}
+
+class Circle extends Shape{
+    draw(){
+        return "Draw a Cir"
+    }
+}
+
+class Square extends Shape{
+    draw(){
+        return "Draw a Squ"
+    }
+}
+
+const Cir = new Circle
+console.log(Cir.draw())
+</script>
