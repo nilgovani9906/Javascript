@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        #img{
+            height: 100px;
+            width: 100px;
+        }
+
+        #cart{
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <center>
+        <div id="cart"></div>
+    </center>
+</body>
+</html>
+
+<script>
+
+let products = JSON.parse(localStorage.getItem("cart")) || []
+
+function displayCart(){
+        products.map((el)=>{
+            let div = document.createElement("div")
+
+            let photo = document.createElement("img")
+            photo.setAttribute("src",el.image)
+
+            let nm = document.createElement("h3")
+            nm.innerText = el.title
+
+            let mn = document.createElement("h2")
+            mn.innerText = "₹ "+el.price
+
+            div.append(photo , nm , mn)
+            document.getElementById("cart").append(div)
+        })
+    }
+
+    displayCart()
+
+</script>
